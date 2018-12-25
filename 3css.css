@@ -1,0 +1,36 @@
+h1	{
+	color: #FF0000;
+	border-color: black;
+	border-style: solid;
+	border-width: 5px;
+
+	/*border : 5px solid black;*/ /* both syntax work*/
+}
+/*Hexadecimal representation # -- -- -- stands for red green blue in ablove example FF0000 means completely red*/
+h2{
+	color: rgb(00,255,00);
+}
+/*RGB base 10 representation above example is for complete green here 255 is th highest and 00  is lowest*/
+h3{
+	color: rgba(0, 255, 85, 0.39);
+}
+/*rgba is similar to rgb but comes with additional feature to set the transparency level here 0.5 is thrans parency level*/
+body{
+	background: url(https://cdn.britannica.com/80/157180-131-BD67A140.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+p{
+	background-color: blue;
+}
+
+div	{
+	font-family: cursive;
+}
+
+#spl{
+	background-color: yellow;
+}
+.same{
+	background-color: pink;
+}

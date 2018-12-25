@@ -1,0 +1,59 @@
+/*font-family*/
+
+p {
+	font-family: Raleway;
+}
+
+h1 {
+	font-family: Indie Flower;
+
+}/*font-size*/
+
+body {
+	font-size: 10px;  /*for the wole content in the body i.e all conent in body will be 10px*/
+}
+
+h1 {
+	font-size: 5.0em; /* "em" --> 5 times the parent i.e since h1 is inside <body> h1 will be 5*10 px =  50px */
+}
+
+p {
+	font-size: 2.0em; /* "em" --> 2 times the parent i.e since p is inside <body> p will be 2*10 px =  20px */
+}
+
+span {
+	font-size: 2.0em; /* "em" --> 2 times the parent i.e since span is inside <p> span content will be 5*50 px =  250px */
+}
+
+/*font-weight*/
+
+p{
+	font-weight: normal; /*normal not bold*/
+}
+
+/*line-height*/
+
+p {
+	line-height: 1.5; /*line spacing in paragraph*/
+}
+
+/*text-align*/
+
+h1 {
+	text-align: right;
+}
+
+p {
+	text-align: center;
+}
+
+/*text-decoration*/
+
+p {
+	text-decoration: underline;
+}
+
+h1 {
+	text-decoration: line-through;
+}
+
