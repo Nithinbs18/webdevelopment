@@ -1,12 +1,15 @@
-var colors = randomColors(6);
+
 var squares = document.querySelectorAll(".square");
-var pickedcolor = colors[random(6)];// picks one of the andom color from array of random colors.
+var colors = randomColors(6);
+
+var pickedcolor = colors[random(6)];// picks one of the random color from array of random colors.
 var rgbDisp = document.getElementById("pickedcolorToDisp");
 rgbDisp.textContent =pickedcolor;
+
 var msgOnClick = document.getElementById("msg");
 var h1 = document.getElementById("h1");
 var h3 = document.getElementById("h3");
-var button = document.querySelector("input");
+var resetButton = document.querySelector("input");
 var Easybutton = document.getElementById("Easy");
 var Hardbutton = document.getElementById("Hard");
 
@@ -14,12 +17,12 @@ Easybutton.addEventListener("click",function(){
     Hardbutton.classList.remove("select");
     Easybutton.classList.add("select");
     for(var i=0; i<squares.length; i++){
-        squares[i].style.backgroundColor = "#232323"}
+        squares[i].style.backgroundColor = null}
     colors = randomColors(3);
     pickedcolor =colors[random(3)];
     rgbDisp.textContent =pickedcolor;
     // h1.style.background= "#232323";
-    button.setAttribute("value","Reset")
+    resetButton.setAttribute("value","Reset")
     for(var i=0; i<3; i++){
         squares[i].style.backgroundColor = colors[i];}
 });
@@ -33,31 +36,35 @@ Hardbutton.addEventListener("click",function(){
     pickedcolor = colors[random(6)];
     rgbDisp.textContent =pickedcolor;
     // h1.style.background= "#232323";
-    button.setAttribute("value","Reset")
+    resetButton.setAttribute("value","Reset")
     for(var i=0; i<6; i++){
         squares[i].style.backgroundColor = colors[i];}
 });
 
 
-button.addEventListener("click",function(){
+resetButton.addEventListener("click",function(){
+    Hardbutton.classList.add("select");
+    Easybutton.classList.remove("select");
     colors = randomColors(6);
     pickedcolor = colors[random(6)];
     rgbDisp.textContent =pickedcolor;
     h1.style.background= "steelblue";
-    button.setAttribute("value","Reset");
+    resetButton.setAttribute("value","Reset");
     msgOnClick.textContent = null;
     for(var i=0; i<squares.length; i++){
         squares[i].style.backgroundColor = colors[i];}
 });
+
+var cc;
 for(var i=0; i<squares.length; i++){
 squares[i].style.backgroundColor = colors[i];
 squares[i].addEventListener("click", function(){
-    var cc = this.style.backgroundColor;
+    cc = this.style.backgroundColor;
     if(cc === pickedcolor){
         msgOnClick.textContent = "Correct!!"
         changeAllColor(pickedcolor);
-        h1.style.background= cc;
-        button.setAttribute("value","Play again!!")
+        h1.style.background= pickedcolor;
+        resetButton.setAttribute("value","Play again!!")
         }
     else{
         msgOnClick.textContent = "Try again!!"
