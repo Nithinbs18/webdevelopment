@@ -1,6 +1,6 @@
 var colors = randomColors(6);
 var squares = document.querySelectorAll(".square");
-var pickedcolor = random(6);// picks one of the andom color from array of random colors.
+var pickedcolor = colors[random(6)];// picks one of the andom color from array of random colors.
 var rgbDisp = document.getElementById("pickedcolorToDisp");
 rgbDisp.textContent =pickedcolor;
 var msgOnClick = document.getElementById("msg");
@@ -16,7 +16,7 @@ Easybutton.addEventListener("click",function(){
     for(var i=0; i<squares.length; i++){
         squares[i].style.backgroundColor = "#232323"}
     colors = randomColors(3);
-    pickedcolor = random(3);
+    pickedcolor =colors[random(3)];
     rgbDisp.textContent =pickedcolor;
     // h1.style.background= "#232323";
     button.setAttribute("value","Reset")
@@ -30,7 +30,7 @@ Hardbutton.addEventListener("click",function(){
     for(var i=0; i<squares.length; i++){
         squares[i].style.backgroundColor = "#232323"}
     colors = randomColors(6);
-    pickedcolor = random(6);
+    pickedcolor = colors[random(6)];
     rgbDisp.textContent =pickedcolor;
     // h1.style.background= "#232323";
     button.setAttribute("value","Reset")
@@ -41,7 +41,7 @@ Hardbutton.addEventListener("click",function(){
 
 button.addEventListener("click",function(){
     colors = randomColors(6);
-    pickedcolor = random();
+    pickedcolor = colors[random(6)];
     rgbDisp.textContent =pickedcolor;
     h1.style.background= "steelblue";
     button.setAttribute("value","Reset");
@@ -71,10 +71,8 @@ function changeAllColor(color){
 }
 
 function random(n){
-    var c = colors[(Math.floor(Math.random() * n + 1))+ 1];
-    if (c === undefined)
-    {return colors[1]}
-    else    return c;
+    var c = (Math.floor(Math.random() * n));
+    return c;
 }
 
 function randomColors(n){
