@@ -36,7 +36,7 @@ $(this).toggleClass("completed");})
 $("ul").on("click", "span" ,function(event){
         $(this).parent().fadeOut(500,function(){
             $(this).remove(); })
-            event.stopPropagation();
+        event.stopPropagation();
     })
 
 $("input").keypress(function(event){
@@ -45,9 +45,10 @@ $("input").keypress(function(event){
     var addToDo =$(this).val();
     $(this).val("");
     $("ul").append("<li><span><i class='fa fa-trash' /></span>" + addToDo +"</li>");
+
     }
 })
-$("input").hide();
+
 $("#fa-plus").click(function(){
 $("input").fadeToggle();
 });
