@@ -5,7 +5,7 @@
                 <h1>Parks of Bangalore</h1>
                 <h4>ಜೈ ಕರ್ನಾಟಕ...</h3>
                 <p>
-                     <a class="btn btn-primary btn-lg" href="/welcome/new">Click here to add a new park to the list.</a>
+                     <a class="btn btn-primary" href="/parks/new">Click here to add a new park to the list.</a>
                 </p>
         </div>
     </header>
@@ -16,8 +16,11 @@
                         <div class="thumbnail">
                                 <img src="<%= park.image%>" height="150" width="230"/>
                             <div class="caption">
-                                <h4><%= park.name %></h4>
+                                <p><strong><%= park.name %></strong></p>
                             </div>
+                            <p>
+                                <a href="/parks/<%= park._id %>" class="btn btn-primary" > More Information</a> 
+                            </p>
                         </div>
                     </div>
                 <% });%>
