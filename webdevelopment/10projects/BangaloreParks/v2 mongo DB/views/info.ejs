@@ -1,0 +1,40 @@
+<% include partials/header %>
+
+<h1>More Information:</h1>
+<div class="container">
+  <div class="row">
+   <div class="col-md-3">
+            <p class="lead">BanParks </p>
+            <div class="list-group">
+                <li class="list-group-item active">Info 1</li>
+                <li class="list-group-item">Info 2</li>
+                <li class="list-group-item">Info 3</li>
+            </div>
+    </div>
+            <div class="col-md-9">
+             <div class="img-thumbnail">
+                <img class="img-responsive" src="<%= park.image%>" >
+                <div class="caption-full">
+                    <h4 class="float-right">50Rs.</h4>
+                    <h4><a><%=park.name%></a></h4>
+                    <p><%= park.desc %></p>
+                     <h6>Comments:</h6>
+                     <div >
+                     <% park.comments.forEach(function(park){%>
+                     <p><strong><%= park.author%>:</strong><%= park.text%></p><hr/>
+                     <% })%>
+                     </div>
+                </div>
+                <p>
+           <a href="/parks/<%= park._id %>/comments/new" class="btn btn-success" >Add a Comment</a> 
+           <a href="/parks/" class="btn btn-primary" >Back</a> 
+           <a href="/" class="btn btn-primary" >Home</a> 
+          </p>
+            </div>
+            </div>
+
+         
+           
+   </div>
+</div>
+<% include partials/footer %>

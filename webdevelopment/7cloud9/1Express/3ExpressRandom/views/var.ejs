@@ -1,0 +1,13 @@
+<% include partials/header %>
+<h1>Your variable: <%= htmlVar %> </h1>
+
+<% if(htmlVar.toLowerCase() === "good"){ %>
+  <p>GOOD CHOICE!</p>
+<% } else { %>
+    <p>Bad choice! type good!</p>
+<% } %>
+<% include partials/footer %>
+
+
+<!--Here anything within <%  %> will be treated a java script content, we use <%  %> when ever we have to print something  -->
+<!--if we have only logic to be processed we use only <%  %> eg. consider the if/ else statment above it does not have "=" if we have to print content on HTML we use <%= %> -->
