@@ -1,12 +1,12 @@
 {
-  "name": "bangaloreparks",
+  "name": "11authentication",
   "version": "1.0.0",
-  "description": "Brief discription on beautiful the parks are in bangalore",
+  "description": "all about authentication using passport",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Nithin",
+  "author": "nithin",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
